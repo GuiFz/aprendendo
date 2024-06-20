@@ -17,10 +17,10 @@ function calcular(){
     divisor = parseFloat(document.getElementById("divisor").value);
     dividendo = parseFloat(document.getElementById("dividendo").value);
     try{
-        if(!dividendo || !divisor ){
-            throw new InputVazia();
-        }else if(divisor == 0){
+        if(divisor == 0 ){
             throw new DivisaoPorZero();
+        }else if(!dividendo || !divisor){
+            throw new InputVazia();
         }
         resultado = dividendo/divisor;
         document.getElementById("saida").innerHTML = resultado.toPrecision(3); 
