@@ -1,0 +1,60 @@
+body{
+    font-family:helvetica;
+    padding-top: 0;
+    margin: 0;
+    background-color:#07a;
+}
+h1{
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top:20px;
+    height:70px;
+    text-align:center;
+    color: #fff;
+    border-bottom: 4px solid #000;
+    background-color:#00f;
+}
+.entrada_de_dados{
+    display:grid;
+    gap: 10px;
+}
+.entrada{
+    display: flex;
+    height:40px;
+    width:500px;
+    margin: auto;
+    font-size: 20px;
+    border: 3px #0ff solid;
+
+}
+#saida{
+    display:flex;
+    width:200px;
+    height:33px;
+    font-size: 20px;
+    background-color: #fff;
+    color: #000;
+    margin-top: 0;
+    border: 4px #0a0 solid;
+}
+.process{
+    display:flex;
+    margin: auto;
+    width:510px;    
+    padding-top: 10px;
+    gap: 50%;
+    font-weight: bold;
+}
+#processar{
+    display:flex;
+    width:200px;
+    height:40px;
+    font-size: 20px;
+    text-align:center;
+    cursor:pointer;
+    color: #fff;
+    background-color: #0c0;
+}
+#processar:hover{
+    background-color: #040;
+}
