@@ -70,7 +70,7 @@ function add(valor){
 function igual(){
     sub_calc();
     visor = " ";
-    document.getElementById('vis').innerHTML = res;
+    document.getElementById('vis').innerHTML = "<span style=\"color:#0a0\">"+res+"</span>";
     res = 0;
     opt = " ";
     i = 0;
