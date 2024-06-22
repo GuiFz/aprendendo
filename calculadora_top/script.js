@@ -60,10 +60,12 @@ function mult(opera){
 //     visor = " ";
 //     document.getElementById('vis').innerHTML = visor;
 // }
-function add(valor){
 
-    visor += valor;
-    document.getElementById('vis').innerHTML = visor;
+function add(valor){
+    if(visor.length < 14){
+        visor += valor;
+        document.getElementById('vis').innerHTML = visor;
+    }
 }
 function igual(){
     sub_calc();
@@ -100,3 +102,36 @@ function sub_calc(){
         // break;
     };
 }   
+//Digitação por meio do teclado
+document.addEventListener("keyup",(tecla)=>{
+    if(tecla.key === "0" || tecla.key === "1" || tecla.key === "2" || tecla.key === "3" || tecla.key === "4" || tecla.key === "5" || tecla.key === "6" || tecla.key === "7" || tecla.key === "8" || tecla.key === "9"){
+        add(Number(tecla.key));
+    }else{
+        switch(tecla.key){
+        case ".":
+            add(".");
+        break;
+        case "Backspace":
+            bc();
+        break;
+        case "Enter":
+            igual();
+        break;
+        case "c":
+            C();
+        break;
+        case "+":
+            som("+");
+        break;
+        case "-":
+            sub("-");
+        break;
+        case "x":
+            mult("x");
+        break;
+        case "*":
+            mult("x");
+        break;
+        };
+    }
+})
