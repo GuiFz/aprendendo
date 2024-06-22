@@ -6,6 +6,7 @@ let opera = " ";
 function calc(){ 
     document.getElementById('vis').innerHTML = res;
 }
+//Função de soma
 function som(opera){
     if(opt!=opera){
         opt = opera;        
@@ -18,6 +19,7 @@ function som(opera){
     document.getElementById('vis').innerHTML = visor;
     opt = opera;
 }
+//Função de Subtração
 function sub(opera){
     if(i>0){
         if(opt!=opera){
@@ -32,6 +34,7 @@ function sub(opera){
     document.getElementById('vis').innerHTML = visor;
     opt = opera;
 }
+//Função de Multiplicação
 function mult(opera){
     if(i>0){
         if(opt!=opera){
