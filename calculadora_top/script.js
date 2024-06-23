@@ -8,16 +8,21 @@ function calc(){
 }
 //Função de soma
 function som(opera){
-    if(opt!=opera){
-        opt = opera;        
-        sub_calc();
-    }else{
-        opt = opera;
-       res+=Number(visor); 
-    };
+   if(i>0){
+        if(opt!=opera){
+            sub_calc();
+            opt = opera;        
+        }else{
+            opt = opera;
+        res+=Number(visor); 
+        };
+   }else{
+    i++;
+    res = Number(visor)
+    opt = opera;
+   }
     visor = " ";
     document.getElementById('vis').innerHTML = visor;
-    opt = opera;
 }
 //Função de Subtração
 function sub(opera){
@@ -26,29 +31,34 @@ function sub(opera){
             sub_calc();
             opt = opera;    
         }else{
-           res-=Number(visor); 
+           res-=Number(visor)
+           opt = (opera); 
         }
-    } else{res += Number(visor)}
-    i++;
+    } else{
+        i++;
+        res = Number(visor)
+        opt = opera;
+    }
     visor = " ";
     document.getElementById('vis').innerHTML = visor;
-    opt = opera;
 }
 //Função de Multiplicação
 function mult(opera){
     if(i>0){
         if(opt!=opera){
             sub_calc();
-            opt = opera;    
+            opt = opera;   
+            console.log(res); 
         }else{
-           res*=Number(visor); 
+            res*=Number(visor);
         }
-        res*=Number(visor);
-    } else{res+=Number(visor);}
-    i++;
+    } else{
+        i++;
+        res = Number(visor);
+        opt = opera;
+    }
     visor = " ";
     document.getElementById('vis').innerHTML = visor;
-    opt = opera;
 }
 // function divi(opera){ 
 //     opt = opera;
