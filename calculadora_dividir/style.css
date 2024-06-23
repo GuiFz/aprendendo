@@ -4,15 +4,17 @@ body{
     margin: 0;
     background-color:#07a;
 }
-h1{
+#barra{
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     padding-top:20px;
     height:70px;
     text-align:center;
     color: #fff;
     border-bottom: 4px solid #000;
-    background-color:#00f;
+    background-color:#050;
+    background-image: url(img/fundo_calc_divisao.png);
+    background-size: 105px;
 }
 .entrada_de_dados{
     display:grid;
@@ -49,11 +51,12 @@ h1{
     display:flex;
     width:200px;
     height:40px;
+    font-weight: bold;
     font-size: 20px;
     text-align:center;
     cursor:pointer;
     color: #fff;
-    background-color: #0c0;
+    background-color: #00f;
 }
 #processar:hover{
     background-color: #040;
