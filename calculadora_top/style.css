@@ -1,5 +1,6 @@
 body{
   font-family:helvetica;
+  background-color: #00006f; /*Caso a imagem quebre*/
   background-image:url("img/fundo_calc_top3_400.png");
 }
 /*Tudo*/
