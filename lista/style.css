@@ -1,0 +1,181 @@
+@keyframes copiado{   
+    50%{opacity: 50%};
+}
+
+@keyframes reiniciado{
+    50%{border: 20px solid rgba(240, 0, 0, 0.7)};
+}
+
+@keyframes adicionado{
+    50%{border: 20px solid rgba(0, 170, 0, 0.7)};
+}
+
+* {
+    font-family: Arial, Helvetica;
+}
+
+*::selection {
+    position: absolute;
+    background-color: #f79f07;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    margin: 0px;
+    padding: 0px;   
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    background-color: #192e8c;
+    overflow-y:hidden;
+}
+#geral{
+    display: flex;
+    margin: 0px;
+    padding-top: 20px;
+    width: 100%;
+    height:90vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    opacity: 100%;   
+}
+
+#nav {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+    background-color: #0000ff;
+}
+
+#barraDigitar {
+    display: flex;
+    width: calc(70% + 50px);
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 55px;
+    border: none;
+    border-radius: 40px;
+    font-size: 17px;
+}
+
+#barraDigitar:focus {
+    border-bottom: 3px solid #f79f07;
+    outline: 0;
+}
+
+#botaoAdd {
+    display: flex;
+    width: 45px;
+    height: 40px;
+    position: relative;
+    right: 45px;
+    border: none;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 1000;
+    color: #ffc415;
+    background: transparent;
+    cursor: pointer;
+}
+
+#botaoAdd:hover {
+    color: #00cc00;
+}
+#botaoReiniciar{
+    display: flex;
+    width: 45px;
+    height: 40px;
+    position: relative;
+    right: 45px;
+    border: 4px solid #fff;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 1000;
+    color: #fff;
+    background-color:#f55 ;
+    cursor:pointer;
+}
+
+#botaoReiniciar:hover{
+    background-color:#faa ;
+    
+}
+
+#botaoCopiar{
+    display: flex;
+    width: 170px;
+    height: 50px;
+    position: relative;
+    left: 5px;
+    border: 4px solid #fff;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 1000;
+    color: #fff;
+    background-color:#f55 ;
+    cursor:pointer;
+}
+
+#botaoCopiar:hover{
+    background-color:#faa ;   
+}
+
+#contLista {
+    display: flex;
+    width: 50%;
+    height: 500px;
+    border-radius: 7px;
+    border: 20px solid rgba(0, 0, 255, 0.7);
+    background-clip:padding-box;
+    color: #000;
+    background-color: #fff;
+    overflow: auto;
+}
+
+#lista {
+    line-height: 30px;
+    list-style-type: "- ";
+}
+
+#lista li {
+    display: inline-flex;
+    padding-left: 5px;
+    align-items: center;
+    border-bottom: 2px solid #fa0;
+    border-radius: 2px;
+    min-width: 700px;
+}
+
+#lista li:hover {
+    background: #ddd;
+}
+.remove{
+    display: inline-flex;
+    width: 20px;
+    height: 17px;
+    margin-left: 20px;
+    border: none; 
+    color: #fff;
+    background-color: #ffc415;
+    border-radius: 20%;
+    cursor: pointer;
+}
+.remove:focus{
+    outline: 0;
+}
