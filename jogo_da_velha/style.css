@@ -45,7 +45,6 @@ body{
     height: 70px;
     border: 2px #FFF solid;
     background: transparent;
-    overflow-x:scroll;
 }
 #labelX{
     border-right: 2px transparent solid !important;
@@ -76,7 +75,7 @@ body{
     border-radius: 5px;
     color:#000;
     background-color:#FFF;
-    overflow-x:scroll;
+    overflow-x:hidden;
 }
 
 #pontosO{
