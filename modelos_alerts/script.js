@@ -1,67 +1,82 @@
-const text = "Cadastro Concluido"
-//Variável criada apenas para servir de valor ao alert padrão, já que não é possível usar aspas no html;
-
-class PersonalizedAlert {
-    constructor(text = "Alert") {
-        let newAlert = document.createElement("div");
-        document.body.appendChild(newAlert);
-        newAlert.setAttribute("class", "newAlertClass");
-        newAlert.setAttribute("id", "newAlert");
-        newAlert.innerHTML += `<p>${text}</p>`;
+function newAlert(text) {
+    if (document.getElementById("newPopup") === null) {
+        let newPopup = document.createElement("div");
+        document.body.appendChild(newPopup);
+        newPopup.setAttribute("class", "newAlertClass");
+        newPopup.setAttribute("id", "newPopup");
+        newPopup.innerHTML += `<p>${text}</p>`;
 
         let ButtonOk = document.createElement("button");
-        ButtonOk.setAttribute("class", "newAlertButtonsClass")
-        ButtonOk.innerText = "OK";
-        newAlert.appendChild(ButtonOk);
+        ButtonOk.innerText = "Ok";
+        newPopup.appendChild(ButtonOk);
 
         ButtonOk.addEventListener("click", function () {
-            outAlert();
+            document.getElementById("newPopup").style.animation = "";
+
+            setTimeout(() => document.getElementById("newPopup").style.animation = "newPopupOutBottom 1000ms forwards"
+                , 100);
+
+            setTimeout(() => document.getElementById("newPopup").remove()
+                , 1500)
+
+        })
+    }
+
+}
+
+function newConfirm(text) {
+    if (document.getElementById("newPopup") === null) {
+        let newPopup = document.createElement("div");
+        document.body.appendChild(newPopup);
+        newPopup.setAttribute("class", "newConfirmClass");
+        newPopup.setAttribute("id", "newPopup");
+        newPopup.innerHTML += `<p>${text}</p>`;
+
+        let buttons = document.createElement("div");
+        let buttonYes = document.createElement("button");
+        let buttonNo = document.createElement("button");
+
+        buttons.setAttribute("class", "confirmButtons");
+        buttons.appendChild(buttonYes);
+        buttons.appendChild(buttonNo);
+
+        buttonYes.innerText = "Sim";
+        buttonNo.innerText = "Não";
+
+        buttonYes.setAttribute("value", "Ok");
+        buttonYes.setAttribute("id", "buttonYes");
+        buttonNo.setAttribute("value", "Cancelar");
+        buttonNo.setAttribute("id", "buttonNo");
+
+        newPopup.appendChild(buttons);
+
+        buttonYes.addEventListener("click", function () {
+            document.getElementById("newPopup").style.animation = "";
+            setTimeout(() => document.getElementById("newPopup").style.animation = "newPopupOutBottom 1000ms forwards"
+                , 100);
+            setTimeout(() => document.getElementById("newPopup").remove()
+                , 1500)
         })
 
-        document.addEventListener("keyup", function (tecla) {
-            if (tecla.key == "Enter") {
-                ButtonOk.click();
-            }
+        buttonNo.addEventListener("click", function () {
+            document.getElementById("newPopup").style.animation = "";
+            setTimeout(() => document.getElementById("newPopup").style.animation = "newPopupOutBottom 1000ms forwards"
+                , 100);
+            setTimeout(() => document.getElementById("newPopup").remove()
+                , 1500)
         })
     }
 }
 
-class PersonalizedInfo {
-    constructor(text = "Informação") {
-        if (document.getElementById("newInfo") == undefined) {
-            let newInfo = document.createElement("div");
+function newInfo(text) {
+    if (document.getElementById("newInfo") === null) {
+        let newInfo = document.createElement("div");
+        newInfo.setAttribute("id", "newInfo");
+        document.body.appendChild(newInfo);
+        newInfo.innerHTML = `<p>${text}</p>`;
 
-            newInfo.setAttribute("id", "newInfo");
-            document.body.appendChild(newInfo);
-            newInfo.setAttribute("id", "newInfo");
-            newInfo.innerHTML = `<p>${text}</p>`;
-        }
-    }
-}
-
-function callAlert() {
-    if (document.getElementById("newAlert") == undefined) {
-        let alerta = new PersonalizedAlert("Cadastro Concluido!");
-    }
-};
-
-function outAlert() {
-    document.getElementById("newAlert").style.animation = "";
-    setTimeout(() => document.getElementById("newAlert").style.animation = "newAlertOutTop 1000ms forwards"
-        , 50);
-
-    setTimeout(() => document.getElementById("newAlert").remove()
-        , 1500)
-
-    delete alerta;
-}
-
-function callInfo() {
-    if (document.getElementById("newInfo") == undefined) {
-        let info = new PersonalizedInfo("Cadastro Concluído!");
         setTimeout(() => {
             document.getElementById("newInfo").remove();
-            delete info;
         }, 5500);
     }
-}
+}   

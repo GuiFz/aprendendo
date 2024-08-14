@@ -10,9 +10,15 @@
 </head>
 
 <body>
-    <input type="button" class="buttonsBody" onclick="alert(text)" value="Alert Padrão">
-    <input type="button" class="buttonsBody" onclick="callAlert()" value="Alert Personalizado">
-    <input type="button" class="buttonsBody" onclick="callInfo()" value="Alert Informativo">
+    <input type="button" class="buttonsBody" onclick="alert('Cadastro Concluido!')" value="Alert Padrão" />
+
+    <input type="button" class="buttonsBody" onclick="newInfo('Cadastro Concluido!')" value="Alert Informativo" />
+
+    <input type="button" class="buttonsBody" onclick="newAlert('Cadastro Concluido!')" value="Alert Personalizado" />
+
+    <input type="button" class="buttonsBody" onclick="confirm('Você tem certeza ?')" value="Confirm Padrão" />
+
+    <input type="button" class="buttonsBody" onclick="newConfirm('Você tem Certeza ?')" value="Confirm Person." />
 </body>
 
 </html>
