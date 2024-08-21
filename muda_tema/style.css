@@ -1,0 +1,110 @@
+*{
+    font-family: Verdana ,Helvetica, 'Times New Roman';
+    font-size: 20px;
+    color: #FFF;
+}
+*::selection{
+    background-color: #FFF;
+    color: #000 ;
+}
+
+body{
+    background-color: var(--bgColor, #000);
+}
+
+#colorMode{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    left: -90px;
+    top: 40px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #08F;
+    transition: 700ms;
+}
+#colorMode:hover{
+    left: 5px;
+}
+#lightMode{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(45deg, #FFF, #CCC , #FFF);
+    border: 1px solid #000;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#darkMode{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(45deg, #000, #222, #000);
+    border: 1px solid #FFF;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#form1{
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 80px 80px 100px ;
+    padding-top: 30px;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    left: 50vw;
+    top: 45vh;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(45deg, #0004, #999A, #0007);
+    border: 3px solid var(--secColor,#FFF);
+    border-radius: 10px;
+}
+#form1 button{
+    width: 100%;
+    height: 40px;
+    color: #000;    
+    background-color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#form1 button:hover{
+    background-color: #CCC;
+}
+
+input{
+    display: flex;
+    width: 400px;
+    height: 30px;
+    padding-left:10px ;
+    color: var(--secColor, #FFF);
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px var(--secColor,#FFF) solid;
+}
+input:focus{
+    outline: none;
+    /* border: in; */
+}
+input::placeholder{
+    color: #FFF;
+}
+
+/* #shadow{
+    display: none;
+    position: fixed;
+    top: 90vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 30px;
+    background-color: #222;
+    border-radius: 100%;
+    box-shadow: 10px 5px  2px 35px var(--bgColor,#222);
+} */
