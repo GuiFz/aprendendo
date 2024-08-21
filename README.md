@@ -1,2 +1,2 @@
-# calculadora
- Criando algumas calculadoras, para aprender
+# Aprendendo a programar :)
+ Criando alguns projetos, para aprender
